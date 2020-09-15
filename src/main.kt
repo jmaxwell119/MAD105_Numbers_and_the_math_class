@@ -7,22 +7,18 @@ fun main(){
         val itemCost = readLine()!!.toDouble()
         total += itemCost
         val currency = DecimalFormat("$.00")
-        val totalFormatted = currency.format(total)
         val tax = total * .025
-        val taxFormatted = currency.format(tax)
         val totalWithTax = total + tax
-        val totalWithTaxFormatted = currency.format(totalWithTax)
         val reccTip = totalWithTax * .175
-        val reccTipFormatted = currency.format(reccTip)
         if (itemCost == 0.00){
             print("total is ")
-            println(totalFormatted)
+            println(currency.format(total))
             print("tax is ")
-            println(taxFormatted)
+            println(currency.format(tax))
             print("total with tax is ")
-            println(totalWithTaxFormatted)
+            println(currency.format(totalWithTax))
             print("17.5% tip is ")
-            println(reccTipFormatted)
+            println(currency.format(reccTip))
         }
     }while (itemCost != 0.00)
 
